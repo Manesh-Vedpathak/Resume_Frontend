@@ -10,6 +10,7 @@ import modern from "../assets/templates/Blue.jpeg";
 import professional from "../assets/templates/Green.jpeg";
 import creative from "../assets/templates/Orange.jpeg";
 import minimal from "../assets/templates/Grey.jpeg";
+import api from "../service/api";
 
 import "./TemplateSelection.css";
 
