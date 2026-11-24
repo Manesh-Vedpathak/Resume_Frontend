@@ -7,30 +7,23 @@
     font-family: 'Poppins', sans-serif;
 }
 
-
-/* =====================================================
-   RESUME PAGE
-===================================================== */
+/* PAGE */
 
 .resume-page {
     min-height: 100vh;
     background: #eef2f7;
     padding: 20px;
+    overflow-x: auto;
 }
 
-
-/* =====================================================
-   TOOLBAR
-===================================================== */
+/* TOOLBAR */
 
 .resume-toolbar {
     max-width: 1100px;
     margin: 0 auto 25px;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     gap: 15px;
 }
 
@@ -41,31 +34,28 @@
 }
 
 .toolbar-btn {
-    height: 44px;
-
+    min-height: 44px;
     padding: 0 18px;
-
     border: none;
     border-radius: 8px;
-
     color: white;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     gap: 8px;
-
     font-size: 14px;
     font-weight: 600;
-
     cursor: pointer;
-
     transition: 0.3s;
 }
 
 .toolbar-btn:hover {
     transform: translateY(-2px);
+}
+
+.toolbar-btn:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
 }
 
 .back {
@@ -88,66 +78,40 @@
     background: #7c3aed;
 }
 
-
-/* =====================================================
-   A4 RESUME
-===================================================== */
+/* FIXED A4 RESUME */
 
 .resume-container {
-
     width: 794px;
     min-height: 1123px;
-
     margin: 0 auto;
-
     background: white;
-
     overflow: hidden;
-
-    box-shadow:
-        0 5px 25px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+    box-sizing: border-box;
 }
 
-
-/* =====================================================
-   HEADER
-===================================================== */
+/* HEADER */
 
 .resume-header {
-
     padding: 32px 35px 27px;
-
     text-align: center;
-
     color: white;
 }
 
 .resume-header h1 {
-
     font-size: 36px;
-
     font-weight: 700;
-
     margin-bottom: 18px;
-
     color: white;
 }
 
-
 .contact-row {
-
     display: flex;
-
     justify-content: center;
-
     align-items: center;
-
     flex-wrap: wrap;
-
     gap: 12px 25px;
-
     margin-bottom: 10px;
-
     font-size: 12px;
 }
 
@@ -159,49 +123,28 @@
     font-weight: 700;
 }
 
-
-/* =====================================================
-   BODY
-===================================================== */
+/* BODY - ALWAYS TWO COLUMNS */
 
 .resume-body {
-
     display: grid;
-
     grid-template-columns: 30% 70%;
-
     min-height: 900px;
 }
 
-
-/* =====================================================
-   LEFT COLUMN
-===================================================== */
-
 .left-column {
-
     background: #f8fafc;
-
     padding: 35px 22px;
+    min-width: 0;
 }
-
-
-/* =====================================================
-   RIGHT COLUMN
-===================================================== */
 
 .right-column {
-
     padding: 35px 28px;
+    min-width: 0;
 }
 
-
-/* =====================================================
-   SECTION
-===================================================== */
+/* SECTIONS */
 
 .resume-section {
-
     margin-bottom: 28px;
 }
 
@@ -209,427 +152,262 @@
     margin-bottom: 0;
 }
 
-
-/* Section heading */
-
 .resume-section h2 {
-
     font-size: 19px;
-
     font-weight: 700;
-
     padding-bottom: 7px;
-
     margin-bottom: 16px;
-
     border-bottom: 2px solid;
 }
 
-
-/* =====================================================
-   SUMMARY
-===================================================== */
+/* SUMMARY */
 
 .summary-text {
-
     font-size: 12px;
-
     line-height: 1.65;
-
     color: #444;
-
     text-align: left;
+    overflow-wrap: anywhere;
 }
 
-
-/* =====================================================
-   RESUME ITEMS
-===================================================== */
+/* RESUME ITEMS */
 
 .resume-item {
-
     margin-bottom: 22px;
-
     padding-left: 14px;
-
     border-left: 3px solid;
+    break-inside: avoid;
+    page-break-inside: avoid;
 }
 
 .resume-item:last-child {
     margin-bottom: 0;
 }
 
-
 .resume-item h3 {
-
     font-size: 15px;
-
     font-weight: 700;
-
     margin-bottom: 3px;
-
     color: #222;
+    overflow-wrap: anywhere;
 }
-
 
 .resume-item h4 {
-
     font-size: 13px;
-
     font-weight: 600;
-
     color: #555;
-
     margin-bottom: 4px;
+    overflow-wrap: anywhere;
 }
-
 
 .resume-item p {
-
     font-size: 11.5px;
-
     line-height: 1.55;
-
     color: #555;
-
     margin-top: 6px;
+    overflow-wrap: anywhere;
 }
 
-
 .university {
-
     margin-top: 2px !important;
-
     color: #666 !important;
-
     font-size: 11px !important;
 }
 
-
 .resume-date {
-
     font-size: 11px;
-
     color: #777;
-
     margin-top: 4px;
 }
 
-
-/* =====================================================
-   BADGES
-===================================================== */
+/* BADGES */
 
 .badge-container {
-
     display: flex;
-
     flex-wrap: wrap;
-
     gap: 8px;
 }
 
-
 .skill-badge,
 .language-badge {
-
     display: inline-flex;
-
     align-items: center;
-
     justify-content: center;
-
     padding: 6px 12px;
-
     border-radius: 20px;
-
     color: white;
-
     font-size: 10.5px;
-
     font-weight: 600;
 }
 
-
-/* =====================================================
-   PROFESSIONAL THEME
-   Similar to Resume 8
-===================================================== */
+/* PROFESSIONAL - GREEN */
 
 .resume-container.professional .resume-header {
-
-    background:
-        linear-gradient(
-            135deg,
-            #198754,
-            #20c997
-        );
+    background: linear-gradient(135deg, #198754, #20c997);
 }
-
 
 .resume-container.professional .resume-section h2 {
-
     color: #198754;
-
     border-color: #198754;
 }
-
 
 .resume-container.professional .resume-item {
-
     border-color: #198754;
 }
 
-
-.resume-container.professional
-.skill-badge,
-
-.resume-container.professional
-.language-badge {
-
+.resume-container.professional .skill-badge,
+.resume-container.professional .language-badge {
     background: #198754;
 }
 
-
-/* =====================================================
-   MODERN THEME
-===================================================== */
+/* MODERN - BLUE */
 
 .resume-container.modern .resume-header {
-
-    background:
-        linear-gradient(
-            135deg,
-            #2563eb,
-            #0ea5e9
-        );
+    background: linear-gradient(135deg, #2563eb, #0ea5e9);
 }
-
 
 .resume-container.modern .resume-section h2 {
-
     color: #2563eb;
-
     border-color: #2563eb;
 }
-
 
 .resume-container.modern .resume-item {
-
     border-color: #2563eb;
 }
 
-
-.resume-container.modern
-.skill-badge,
-
-.resume-container.modern
-.language-badge {
-
+.resume-container.modern .skill-badge,
+.resume-container.modern .language-badge {
     background: #2563eb;
 }
 
-
-/* =====================================================
-   CREATIVE THEME
-===================================================== */
+/* CREATIVE - PURPLE */
 
 .resume-container.creative .resume-header {
-
-    background:
-        linear-gradient(
-            135deg,
-            #7c3aed,
-            #ec4899
-        );
+    background: linear-gradient(135deg, #7c3aed, #ec4899);
 }
 
-
 .resume-container.creative .resume-section h2 {
-
     color: #7c3aed;
-
     border-color: #ec4899;
 }
 
-
 .resume-container.creative .resume-item {
-
     border-color: #7c3aed;
 }
 
-
-.resume-container.creative
-.skill-badge,
-
-.resume-container.creative
-.language-badge {
-
+.resume-container.creative .skill-badge,
+.resume-container.creative .language-badge {
     background: #7c3aed;
 }
 
-
-/* =====================================================
-   MINIMAL THEME
-===================================================== */
+/* MINIMAL - BLACK */
 
 .resume-container.minimal .resume-header {
-
     background: #222;
 }
-
 
 .resume-container.minimal .resume-section h2 {
-
     color: #222;
-
     border-color: #222;
 }
-
 
 .resume-container.minimal .resume-item {
-
     border-color: #222;
 }
 
-
-.resume-container.minimal
-.skill-badge,
-
-.resume-container.minimal
-.language-badge {
-
+.resume-container.minimal .skill-badge,
+.resume-container.minimal .language-badge {
     background: #222;
 }
 
-
-/* =====================================================
-   PRINT
-===================================================== */
+/* PRINT */
 
 @page {
-
     size: A4;
-
     margin: 0;
 }
 
-
 @media print {
-
+    html,
     body {
-
         margin: 0;
-
         padding: 0;
-
         background: white;
     }
 
     .resume-page {
-
         padding: 0;
-
         background: white;
+        overflow: visible;
     }
 
     .resume-toolbar {
-
-        display: none;
+        display: none !important;
     }
 
     .resume-container {
-
-        width: 794px;
-
+        width: 794px !important;
         min-height: 1123px;
-
         margin: 0;
-
         box-shadow: none;
+        overflow: hidden;
     }
 
-    .resume-section {
-
-        page-break-inside: avoid;
-    }
-
-    .resume-item {
-
-        page-break-inside: avoid;
+    .resume-body {
+        display: grid !important;
+        grid-template-columns: 30% 70% !important;
     }
 }
 
-
-/* =====================================================
-   RESPONSIVE
-===================================================== */
+/* MOBILE - ONLY THE TOOLBAR CHANGES */
 
 @media (max-width: 900px) {
-
     .resume-page {
-        padding: 15px;
+        padding: 12px;
+        overflow-x: auto;
     }
 
-
     .resume-toolbar {
-
         flex-direction: column;
-
         align-items: stretch;
     }
 
-
     .toolbar-right {
-
         display: grid;
-
         grid-template-columns: 1fr 1fr;
-
         width: 100%;
     }
-
 
     .toolbar-btn {
-
         width: 100%;
     }
 
-
+    /* Keep the resume document at A4 dimensions */
     .resume-container {
-
-        width: 100%;
-
-        min-height: auto;
+        width: 794px;
+        min-height: 1123px;
+        margin: 0 auto;
     }
-
 
     .resume-body {
-
-        grid-template-columns: 1fr;
+        grid-template-columns: 30% 70%;
     }
 
+    .left-column {
+        padding: 35px 22px;
+    }
 
-    .left-column,
     .right-column {
-
-        padding: 25px 20px;
+        padding: 35px 28px;
     }
-
 
     .resume-header h1 {
-
-        font-size: 28px;
+        font-size: 36px;
     }
-
 
     .contact-row {
-
-        flex-direction: column;
-
-        gap: 7px;
-
+        flex-direction: row;
+        gap: 12px 25px;
         align-items: center;
     }
-
 }
