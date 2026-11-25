@@ -334,7 +334,7 @@ function Home() {
           <hr />
 
           <p>
-            Project Developed by : Manesh Vedpathak
+            Project Developed by Manesh Vedpathak
           </p>
 
         </div>
